@@ -28,7 +28,7 @@ bhm.mcmc <- function(dat, nsim = 2000, burnin = 500, scale.factor = 1, adaptive.
 		return(out)
 	}
 	
-	if (class(dat) != "mederrData") {
+	if (!inherits(dat, "mederrData")) {
 		stop("dat argument not of class 'mederrData'. Type '?mederrData' for help.")
 	}
 	
@@ -113,7 +113,7 @@ dst <- function(x, sigma, k, eta) {
 }
 
 logp <- function(theta, deltaj, sigma2, i, k, eta, dat) {
-	if (class(dat) != "mederrData") {
+	if (!inherits(dat, "mederrData")) {
 		stop("dat argument not of class 'mederrData'. Type '?mederrData' for help.")
 	}
 	
@@ -125,10 +125,10 @@ logp <- function(theta, deltaj, sigma2, i, k, eta, dat) {
 
 bhm.resample <- function(model, dat, p.resample = 0.1, k, eta) {
 
-	if (class(model) != "mederrFit") {
+	if (!inherits(model, "mederrFit")) {
 		stop("Model argument not of class 'mederrFit'. Type '?mederrFit' for help.")
 	}
-	if (class(dat) != "mederrData") {
+	if (!inherits(dat, "mederrData")) {
 		stop("dat argument not of class 'mederrData'. Type '?mederrData' for help.")
 	}
 
@@ -194,7 +194,7 @@ bhm.resample <- function(model, dat, p.resample = 0.1, k, eta) {
 }
 
 logunpost <- function(resample) {
-	if (class(resample) != "mederrResample") {
+	if (!inherits(resample, "mederrResample")) {
 		stop("Resample argument not of class 'mederrResample'. Type '?mederrResample' for help.")
 	}
 	
@@ -206,10 +206,10 @@ logunpost <- function(resample) {
 }
 
 bhm.constr.resamp <- function(model, resample, k = Inf, eta = 1) {
-	if (class(model) != "mederrFit") {
+	if (!inherits(model, "mederrFit")) {
 		stop("model argument not of class 'mederrFit'. Type '?mederrFit' for help.")
 	}
-	if (class(resample) != "mederrResample") {
+	if (!inherits(resample, "mederrResample")) {
 		stop("Resample argument not of class 'mederrResample'. Type '?mederrResample' for help.")
 	}
 	
@@ -229,7 +229,7 @@ bhm.constr.resamp <- function(model, resample, k = Inf, eta = 1) {
 }
 
 bayes.rank <- function(model) {
-	if (class(model) != "mederrFit") {
+	if (!inherits(model, "mederrFit")) {
 		stop("Model argument not of class 'mederrFit'. Type '?mederrFit' for help.")
 	}
 	
@@ -245,10 +245,10 @@ bayes.rank <- function(model) {
 }
 
 post.rep <- function(model, dat) {
-	if (class(model) != "mederrFit") {
+	if (!inherits(model, "mederrFit")) {
 		stop("Model argument not of class 'mederrFit'. Type '?mederrFit' for help.")
 	}
-	if (class(dat) != "mederrData") {
+	if (!inherits(dat, "mederrData")) {
 		stop("dat argument not of class 'mederrData'. Type '?mederrData' for help.")
 	}
 	
@@ -386,7 +386,7 @@ mixnegbinom.em <- function(dat, theta0, maxiter = 50000, toler = 0.01, se = TRUE
 		return(sum(fnc*theta[1:n]))
 	}
 	
-	if (class(dat) != "mederrData") {
+	if (!inherits(dat, "mederrData")) {
 		stop("dat argument not of class 'mederrData'. Type '?mederrData' for help.")
 	}
 	
@@ -522,7 +522,7 @@ negbinom.em <- function(dat, theta0, maxiter = 50000, toler = 0.01, se = TRUE, s
 		return(sum(fnc))
 	}
 	
-	if (class(dat) != "mederrData") {
+	if (!inherits(dat, "mederrData")) {
 		stop("dat argument not of class 'mederrData'. Type '?mederrData' for help.")
 	}
 	

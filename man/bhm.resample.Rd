@@ -28,7 +28,7 @@ bhm.resample(model, dat, p.resample = 0.1, k, eta)
   Myers, J. A., Venturini, S., Dominici, F. and Morlock, L. (2011), "Random Effects Models for Identifying the Most Harmful Medication Errors in a Large, Voluntary Reporting Database". Technical Report.
 }
 \author{
-Sergio Venturini \email{sergio.venturini@unibocconi.it}, 
+Sergio Venturini \email{sergio.venturini@unicatt.it}, 
 
 Jessica A. Myers \email{jmyers6@partners.org}
 }

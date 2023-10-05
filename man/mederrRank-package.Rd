@@ -9,10 +9,6 @@
   \packageDescription{mederrRank}
 }
 \details{
-
-The DESCRIPTION file:
-  \packageDESCRIPTION{mederrRank}
-  \packageIndices{mederrRank}
   The package is loaded with the usual \code{library(mederrRank)} command. The most important functions are \code{\link{bhm.mcmc}}, \code{\link{bhm.resample}} and \code{\link{mixnegbinom.em}}.
 }
 \author{
